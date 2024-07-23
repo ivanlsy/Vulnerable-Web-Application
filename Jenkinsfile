@@ -18,8 +18,8 @@ pipeline {
             steps {
                 script {
                     // Ensure the tool name matches what is configured in Jenkins
-                    def scannerHome = tool name: 'SonarQubeScanner';
-                    withSonarQubeEnv('SonarQubeScanner') {
+                    def scannerHome = tool name: 'SonarQube';
+                    withSonarQubeEnv('SonarQube') {
                         sh """
                         ${scannerHome}/bin/sonar-scanner \
                         -Dsonar.projectKey=OWASP \
